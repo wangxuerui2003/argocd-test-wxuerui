@@ -4,7 +4,7 @@ metadata:
   name: argocd-playground-ingress
 spec:
   rules:
-    - host: wil-playground.localhost
+    - host: wil-playground.local
       http:
         paths:
           - path: /
