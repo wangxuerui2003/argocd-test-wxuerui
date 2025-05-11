@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: argocd-playground-ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.priority: "20"
 spec:
   rules:
     - http:
