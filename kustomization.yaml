@@ -4,7 +4,7 @@ metadata:
   name: iot-argocd
   namespace: argocd
 spec:
-  project: dev
+  project: default
   source:
     path: dev
     repoURL: "https://github.com/wangxuerui2003/argocd-test-wxuerui"
