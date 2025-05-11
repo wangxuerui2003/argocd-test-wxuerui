@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: iot-argocd
+spec:
+  project: dev
+  source:
+    path: dev
+    repoURL: "https://github.com/wangxuerui2003/argocd-test-wxuerui"
+    targetRevision: HEAD
+  destination:
+    namespace: default
+    server: "https://kubernetes.default.svc"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
