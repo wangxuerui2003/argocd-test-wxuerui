@@ -4,7 +4,7 @@ metadata:
   name: argocd-playground-ingress
 spec:
   rules:
-    - host: wil-playground.local
+    - host: localhost
       http:
         paths:
           - path: /
@@ -13,4 +13,4 @@ spec:
               service:
                 name: argocd-playground-service
                 port:
-                  number: 80
+                  number: 8888
